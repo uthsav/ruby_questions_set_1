@@ -33,3 +33,31 @@
   # Result 1
   # 2
 
+  class Poly
+    def add(addition)
+      addition.add
+    end
+    def con(concatinate)
+      concatinate.con
+    end
+  end
+  class Addition
+    def add
+      puts "adding two numbers"
+    end
+    def con
+      puts "concatinate two numbers"
+    end
+  end
+  class Concatinate
+    def add
+      puts "adding two numbers"
+    end
+    def con
+      puts "concatinate two numbers"
+    end
+  end
+  poly_obj=Poly.new
+  add_obj=Addition.new
+  poly_obj.add(add_obj)
+  poly_obj.con(add_obj)
