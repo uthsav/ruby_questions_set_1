@@ -34,30 +34,34 @@
   # 2
 
   class Poly
-    def add(addition)
-      addition.add
-    end
-    def con(concatinate)
-      concatinate.con
+    def initialize
     end
   end
-  class Addition
-    def add
-      puts "adding two numbers"
-    end
-    def con
-      puts "concatinate two numbers"
-    end
-  end
-  class Concatinate
-    def add
-      puts "adding two numbers"
-    end
-    def con
-      puts "concatinate two numbers"
+  class Addition<Poly
+    def addition
+      puts "Enter first number"
+      a= gets.to_i
+      puts "you have entered #{a}"
+      puts "Enter second number"
+      b = gets.to_i
+      puts "you have entered #{b}"
+      c=a+b
+      puts "result is #{c}"
     end
   end
-  poly_obj=Poly.new
-  add_obj=Addition.new
-  poly_obj.add(add_obj)
-  poly_obj.con(add_obj)
+  class Concatination<Poly
+    def concatination
+      puts "Enter first number"
+      a = gets.to_i
+      puts "you have entered #{a}"
+      puts "Enter second number"
+      b = gets.to_i
+      puts "you have entered #{b}"
+      c=[a,b].join.to_i
+      puts "result is #{c}"
+    end
+  end
+  add=Addition.new  
+  add.addition
+  con=Concatination.new
+  con.concatination
