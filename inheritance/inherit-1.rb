@@ -53,33 +53,61 @@
 # c.put
 # instantiate an object and print his firstName, secondName, lastName fullName.
 
+# class Father
+#   def initialize
+#     puts "Im a father"
+#   end
+# end
+# class Son < Father
+#   def initialize(firstname,secondname,lastName,fullName)
+#     @firstname=firstname
+#     @secondname=secondname
+#     @lastName=lastName
+#     @fullName=fullName
+#   end
+#   def First_name
+#     puts "firstname #{@firstname}"
+#   end
+#   def Second_name
+#     puts "secondname #{@secondname}"
+#   end
+#   def Last_name
+#     puts " lastName #{@lastName}"
+#   end
+#   def Full_name
+#    puts"fullName #{@fullName}"
+#   end
+# end
+# family=Son.new("bruce","martha","thomas","my name is bruce martha thomas")
+# puts family.First_name
+# puts family.Second_name
+# puts family.Last_name
+# puts family.Full_name
+
 class Father
-  def initialize
-    puts "Im a father"
-  end
+ def fname
+ @fname="Thomas"
+ puts "last name : #{@fname}"
+ end
 end
-class Son < Father
-  def initialize(firstname,secondname,lastName,fullName)
-    @firstname=firstname
-    @secondname=secondname
-    @lastName=lastName
-    @fullName=fullName
-  end
-  def First_name
-    @firstname
-  end
-  def Second_name
-    @secondname
-  end
-  def Last_name
-    @lastName
-  end
-  def Full_name
-    @fullName
-  end
+class Mother < Father
+ def mname 
+ @mname="Martha"
+ puts "Second name :#{@mname}"
+ end
 end
-family=Son.new("bruce","martha","thomas","my name is bruce martha thomas")
-puts family.First_name
-puts family.Second_name
-puts family.Last_name
-puts family.Full_name
+class Son < Mother
+ def flname
+ @flname="Bruce"
+ puts "First name:#{@flname}"
+ mname 
+ fname
+ # fname mname
+ end
+ def fullname
+ puts " Full name is :#{@flname} #{@mname} #{@fname}" 
+end
+end
+s=Son.new
+s.flname
+s.fullname

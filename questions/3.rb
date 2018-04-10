@@ -17,3 +17,15 @@
 #        Or
 # File not found
 
+puts "Enter the filename"
+file=gets.to_s
+aFile=File.new(file,"w")
+puts "enter the text"
+info=gets.to_s
+aFile.puts(info)
+puts "Created new file"
+aFile.close
+puts "enter the delete file"
+h=gets.to_s
+File.delete(h)
+puts "File deleted"
